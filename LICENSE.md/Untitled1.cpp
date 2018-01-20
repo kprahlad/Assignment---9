@@ -66,7 +66,7 @@ void LL::add(int data,int pos)
 		{
 			curr=curr->next; //Go to the next one
 		}
-		if(i!=pos) // If there exists no such position, oops!
+		if(i!=pos-1) // If there exists no such position, oops!
 		{
 			cout<<"Oops!";
 		}
@@ -74,10 +74,10 @@ void LL::add(int data,int pos)
 		{
 			temp->next=curr->next;
 			curr->next=temp; 
+			cout<<"\nIt has been added!";
 		}
 	}
 	temp=NULL;
-	cout<<"\nIt has been added!";
 }
 void LL::delatstart()
 {
@@ -111,7 +111,7 @@ void LL::del(int pos)
 		{
 			curr=curr->next; //Go to the next one
 		}
-		if(i!=pos) // If there exists no such position, oops!
+		if(i!=pos-1) // If there exists no such position, oops!
 		{
 			cout<<"Oops!";
 		}
@@ -119,9 +119,9 @@ void LL::del(int pos)
 		{
 			temp=curr->next;
 			curr->next=temp->next;
+			cout<<"\nIt has been deleted!";
 		}
 	}
-	cout<<"\nIt has been deleted!";
 }
 void LL::print() //Print the stuff out. Duh.
 {
